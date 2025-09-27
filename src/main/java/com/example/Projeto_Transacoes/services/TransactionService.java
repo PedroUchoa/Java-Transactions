@@ -1,6 +1,7 @@
 package com.example.Projeto_Transacoes.services;
 
 import com.example.Projeto_Transacoes.dtos.TransactionDto;
+import com.example.Projeto_Transacoes.infra.TransactionErrorException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,7 @@ public class TransactionService {
 
 
     public void createTransaction(TransactionDto transaction){
+        if(transaction.value() <= 0 || transaction.dateTime().isAfter(OffsetDateTime.now())) throw new TransactionErrorException();
         listItems.add(transaction);
     }
 
