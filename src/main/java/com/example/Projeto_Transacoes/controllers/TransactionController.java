@@ -24,10 +24,10 @@ public class TransactionController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @GetMapping
-    public ResponseEntity<List<TransactionDto>> listAllItems(){
-        List<TransactionDto> items = transactionService.listAllItems();
-        return ResponseEntity.ok().body(items);
+    @DeleteMapping
+    public ResponseEntity<Void> deleteAllTransactions(){
+        transactionService.deleteAllTransactions();
+        return ResponseEntity.ok().build();
     }
 
 }
