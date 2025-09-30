@@ -22,12 +22,12 @@ public class StatisticService {
     private TransactionService transactionService;
 
     public StatisticsDto getAllStatistics(Integer timeInterval){
-        log.info("Iniciando busca de estatisticas de trasações");
+        log.info("Starting the search for transactions");
         List<TransactionDto> listTransactions= transactionService.listTransactions(timeInterval);
         if (listTransactions.isEmpty()) return new StatisticsDto(0L,0.0,0.0,0.0,0.0);
-        log.info("Lista de transações no periodo correto retornada");
-        DoubleSummaryStatistics doubleSummaryStatistics = listTransactions.stream().collect(Collectors.summarizingDouble(TransactionDto::value));
-        log.info("Retornando estatisticas de transações");
+        log.info("List of transactions in a certain period of time returned");
+        DoubleSummaryStatistics doubleSummaryStatistics = listTransactions.stream().mapToDouble(TransactionDto::value).summaryStatistics();
+        log.info("Returning the list of statistics");
         return new StatisticsDto(doubleSummaryStatistics.getCount(),doubleSummaryStatistics.getSum(),doubleSummaryStatistics.getAverage() ,doubleSummaryStatistics.getMin(), doubleSummaryStatistics.getMax());
     }
 
