@@ -2,7 +2,6 @@ package com.example.Projeto_Transacoes.services;
 
 import com.example.Projeto_Transacoes.dtos.StatisticsDto;
 import com.example.Projeto_Transacoes.dtos.TransactionDto;
-
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @Slf4j
