@@ -4,8 +4,6 @@ import com.example.Projeto_Transacoes.dtos.TransactionDto;
 import com.example.Projeto_Transacoes.infra.TransactionErrorException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.time.OffsetDateTime;
@@ -17,8 +15,7 @@ import java.util.List;
 @Slf4j
 public class TransactionService {
 
-    private static final Logger log = LoggerFactory.getLogger(TransactionService.class);
-    private final List<TransactionDto> listItems = new ArrayList<>();
+   private final List<TransactionDto> listItems = new ArrayList<>();
 
 
     public void createTransaction(TransactionDto transaction){
