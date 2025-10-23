@@ -2,6 +2,7 @@ package com.example.Projeto_Transacoes.controllers;
 
 import com.example.Projeto_Transacoes.dtos.TransactionDto;
 import com.example.Projeto_Transacoes.services.TransactionService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/transaction")
+@Slf4j
 public class TransactionController {
 
     @Autowired
