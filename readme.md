@@ -9,6 +9,8 @@ Esse projeto foi desenvolvido para um desafio técnico visando apresentar habili
 **Back-end:** Java 17, Spring Boot 3.5.6, Lombok, lsf4, Spring doc, actuator, Junit, Mockito
 
 
+
+
 ## Rodando localmente
 
 #### 1- Clonar o Repositório
@@ -18,27 +20,19 @@ Esse projeto foi desenvolvido para um desafio técnico visando apresentar habili
   git clone https://github.com/PedroUchoa/Java-Transactions
 ```
 
-#### 2- Configurar o Banco de Dados
-
-- Abra o MySQL e crie um novo banco de dados.
-
-- Acesse o arquivo src/main/resources/application.properties (ou application.yml) e atualize as configurações de conexão com suas credenciais do MySQL:
-
-```
-spring.datasource.url=jdbc:mysql://localhost/nome_do_seu_banco
-spring.datasource.username=seu_usuario
-spring.datasource.password=sua_senha
-```
-
-#### 3- Importar e Executar o Projeto na IDE
+#### 2- Importar e Executar o Projeto na IDE
 
 - Importe o projeto em sua IDE como um projeto Maven.
 
 - Deixe que a IDE resolva e baixe todas as dependências do pom.xml.
 
-- Vá para a classe principal da aplicação (geralmente localizada em src/main/java/) e execute-a fazendo o flyway criar as tabelas no banco de dados.
+#### 2- Rode o comando docker para criação do container e uso localmente 
 
-#### 4- Ver a documentação
+```bash
+  docker-compose up --build
+```
+
+#### 3- Ver a documentação
 
 - Acesse o caminho correto para acessar a documentação
 
