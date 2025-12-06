@@ -26,13 +26,13 @@ Esse projeto foi desenvolvido para um desafio técnico visando apresentar habili
 
 - Deixe que a IDE resolva e baixe todas as dependências do pom.xml.
 
-#### 2- Rode o comando docker para criação do container e uso localmente 
+#### 3- Rode o comando docker para criação do container e uso localmente 
 
 ```bash
   docker-compose up --build
 ```
 
-#### 3- Ver a documentação
+#### 4- Ver a documentação
 
 - Acesse o caminho correto para acessar a documentação
 
